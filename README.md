@@ -10,4 +10,6 @@ Run the Rust by first compiling with `rustc -C opt-level=3 anagrams.rs` and then
 
 The C version currently does not work  
 
+
+
 **Make sure you have the respective runtime installed for whatever language you are trying to run; ex: install ruby to run the ruby version or python to run the python version. The website for each language will have instuctions on how to do this for your platform**
