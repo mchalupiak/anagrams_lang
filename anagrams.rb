@@ -1,6 +1,6 @@
 #! /usr/bin/ruby
 
-#$anagrams = Array.new()
+$anagrams = Array.new()
 
 def completeAnagrams(start, ending)
 	if ending.size() >= 1
@@ -10,7 +10,7 @@ def completeAnagrams(start, ending)
 		completeAnagrams(start + ending[(ending.size() - 1)], ending[0, ending.size() - 1])
 	else
 	  #puts (start + ending)
-#		$anagrams.push(start + ending)
+		$anagrams.push(start + ending)
 	end
 end
 =begin
