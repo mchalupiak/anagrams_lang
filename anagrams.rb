@@ -9,7 +9,7 @@ def completeAnagrams(start, ending)
 		end
 		completeAnagrams(start + ending[(ending.size() - 1)], ending[0, ending.size() - 1])
 	else
-		$anagrams.push(start + ending)
+		# $anagrams.push(start + ending)
 	end
 end
 =begin
@@ -26,4 +26,4 @@ end
 =end
 completeAnagrams("", ARGV[0])
 #removeDups()
-puts $anagrams
+#puts $anagrams
