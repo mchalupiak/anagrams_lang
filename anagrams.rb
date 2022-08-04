@@ -9,12 +9,10 @@ def completeAnagrams(start, ending)
 		end
 		completeAnagrams(start + ending[(ending.size() - 1)], ending[0, ending.size() - 1])
 	else
-<<<<<<< HEAD
 		# $anagrams.push(start + ending)
-=======
-	  #puts (start + ending)
-#		$anagrams.push(start + ending)
->>>>>>> refs/remotes/origin/main
+	  	#puts (start + ending)
+		#$anagrams.push(start + ending)
+
 	end
 end
 =begin
