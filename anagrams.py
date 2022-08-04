@@ -2,7 +2,7 @@
 
 import sys
 
-anagrams = []
+#anagrams = []
 
 def completeAnagrams(start, end):
 	if len(end) >= 1:
@@ -11,7 +11,12 @@ def completeAnagrams(start, end):
 			completeAnagrams(start + end[i-1], end[0:i-1] + end[i:len(end)])
 		completeAnagrams(start + end[len(end)-1], end[0:len(end) - 1])
 	else:
+<<<<<<< HEAD
 		# anagrams.append(start + end)
+=======
+		#anagrams.append(start + end)
+		#print(start + end)
+>>>>>>> refs/remotes/origin/main
 		pass
 '''
 def removeDups():
