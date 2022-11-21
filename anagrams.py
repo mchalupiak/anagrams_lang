@@ -11,6 +11,7 @@ def completeAnagrams(start, end):
 			completeAnagrams(start + end[i-1], end[0:i-1] + end[i:len(end)])
 		completeAnagrams(start + end[len(end)-1], end[0:len(end) - 1])
 	else:
+		# anagrams.append(start + end)
 		#anagrams.append(start + end)
 		print(start + end)
 		#pass

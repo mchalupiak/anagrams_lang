@@ -15,7 +15,7 @@ fn main() {
     //}
 }
 
-fn completeAnagrams(start: &String, end: &String, arr: Rc<RefCell<Vec<String>>>) {
+fn completeAnagrams(start: &String, end: &String) {
     if end.len() >= 1 {
         let mut i = 1;
         while i <= end.len() - 1 {
@@ -24,14 +24,14 @@ fn completeAnagrams(start: &String, end: &String, arr: Rc<RefCell<Vec<String>>>)
             let back: String = String::from(&end[0..i - 1]) + &end[i..end.len()];
             //println!("back: {}", back);
             //println!("len: {}", end.len());
-            completeAnagrams(&front, &back, Rc::clone(&arr));
+            completeAnagrams(&front, &back);
             i += 1;
         }
         let front: String = String::from(start) + &end[end.len() - 1..end.len()];
         let back: String = String::from(&end[0..end.len() - 1]);
-        completeAnagrams(&front, &back, Rc::clone(&arr));
+        completeAnagrams(&front, &back);
     } else {
-        arr.borrow_mut().push(format!("{}{}", start, end));
-        println!("{}{}", start, end);
+        //arr.push(format!("{}{}", start, end));
+        //println!("{}{}", start, end);
     }
 }

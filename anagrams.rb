@@ -11,6 +11,10 @@ def completeAnagrams(start, ending)
 	else
 	  #puts (start + ending)
 		$anagrams.push(start + ending)
+		# $anagrams.push(start + ending)
+	  	#puts (start + ending)
+		#$anagrams.push(start + ending)
+
 	end
 end
 =begin
