@@ -5,11 +5,9 @@ fn main() {
     let anagrams: Rc<RefCell<Vec<String>>> = Rc::new(RefCell::new(Vec::new()));
     //println!("word");
     let letters: Vec<String> = std::env::args().collect();
-    completeAnagrams(
-        &String::from(""),
-        &letters.get(1).unwrap(),
-        Rc::clone(&anagrams),
-    );
+    completeAnagrams(&String::from(""), &letters.get(1).unwrap());
+    // Rc::clone(&anagrams),
+    // );
     //for i in 0..anagrams.borrow().len() {
     //	println!("{}", anagrams.borrow().get(i).unwrap());
     //}
@@ -32,6 +30,6 @@ fn completeAnagrams(start: &String, end: &String) {
         completeAnagrams(&front, &back);
     } else {
         //arr.push(format!("{}{}", start, end));
-        //println!("{}{}", start, end);
+//        println!("{}{}", start, end);
     }
 }

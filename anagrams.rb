@@ -1,6 +1,6 @@
 #! /usr/bin/ruby
 
-$anagrams = Array.new()
+#$anagrams = Array.new()
 
 def completeAnagrams(start, ending)
 	if ending.size() >= 1
@@ -10,12 +10,26 @@ def completeAnagrams(start, ending)
 		completeAnagrams(start + ending[(ending.size() - 1)], ending[0, ending.size() - 1])
 	else
 	  #puts (start + ending)
-		$anagrams.push(start + ending)
+		#$anagrams.push(start + ending)
 		# $anagrams.push(start + ending)
 	  	#puts (start + ending)
 		#$anagrams.push(start + ending)
 
 	end
+end
+
+def completeAnagrams2(start, ending)
+  if ending.size() > 0
+    ending.each_char { |x| completeAnagrams2(start + x, ending.sub(x, ''))}
+  end
+end
+
+def completeAnagrams3(start, ending)
+  if ending.size() > 0
+    for i in 0..ending.size()-1
+      completeAnagrams3(start + ending[i], ending.sub(ending[i], ''))
+    end
+  end
 end
 =begin
 def removeDups()
@@ -29,6 +43,6 @@ def removeDups()
 	end
 end
 =end
-completeAnagrams("", ARGV[0])
+completeAnagrams3("", ARGV[0])
 #removeDups()
 #puts $anagrams

@@ -66,7 +66,7 @@ void completeAnagrams(char* start, char* end)//, struct node* ll) //char** arr, 
 		strcpy(arr[arr_index], anagram);
 		arr_index++;
 		*/
-		printf("%s%s\n", start, end);
+//		printf("%s%s\n", start, end);
 	}
 }
 /*
