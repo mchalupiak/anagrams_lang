@@ -2,7 +2,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 fn main() {
-    let anagrams: Rc<RefCell<Vec<String>>> = Rc::new(RefCell::new(Vec::new()));
+    //let anagrams: Rc<RefCell<Vec<String>>> = Rc::new(RefCell::new(Vec::new()));
     //println!("word");
     let letters: Vec<String> = std::env::args().collect();
     completeAnagrams(&String::from(""), &letters.get(1).unwrap());

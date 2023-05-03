@@ -1,3 +1,4 @@
+
 (define (rm-elm elm items acc) 
   (cond ((null? items) (reverse acc))
         ((eq? elm (car items)) (append (reverse acc) (cdr items)))

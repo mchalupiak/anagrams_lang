@@ -12,7 +12,7 @@ void completeAnagrams(char* start, char* end)//, struct node* ll) //char** arr, 
 {
 	int len_end = strlen(end);
 	int len_start = strlen(start);
-	if (len_end > 1)
+	if (len_end >= 1)
 	{
 		for (int i = 1; i < len_end; i++)
 		{
@@ -67,6 +67,7 @@ void completeAnagrams(char* start, char* end)//, struct node* ll) //char** arr, 
 		arr_index++;
 		*/
 //		printf("%s%s\n", start, end);
+        //printf("%s\n", start);
 	}
 }
 /*
