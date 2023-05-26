@@ -12,11 +12,16 @@ void completeAnagrams(char* start, char* end)//, struct node* ll) //char** arr, 
 {
 	int len_end = strlen(end);
 	int len_start = strlen(start);
+    int mal_start = sizeof(char) * (len_start+2);
+    int mal_end = sizeof(char) * len_end;
+    char new_start[mal_start];
+    char new_end[mal_end];
 	if (len_end >= 1)
 	{
 		for (int i = 1; i < len_end; i++)
 		{
-			char* new_start = malloc(sizeof(char)*(len_start + 2));
+			//char* new_start = malloc(mal_start);
+            //char new_start[mal_start];
 			strcpy(new_start, start);
 			strncat(new_start, end + i-1, 1);
 			// printf("%s\n", new_start);
@@ -27,10 +32,10 @@ void completeAnagrams(char* start, char* end)//, struct node* ll) //char** arr, 
 			strncpy(second_end, end+i, len_end-i);
 */
 			//printf("%s\n", first_end);
-			char* new_end = malloc(sizeof(char)*len_end);
+			//char* new_end = malloc(mal_end);
+            //char new_end[mal_end];
 			strcpy(new_end, "");
 			strncat(new_end, end, i-1);
-			//TODO same bytes copied here: find way to fix
 			strncat(new_end, end + i, len_end-i);/*
 			free(first_end);
 			free(second_end);*/
@@ -40,22 +45,24 @@ void completeAnagrams(char* start, char* end)//, struct node* ll) //char** arr, 
 			// printf("%s %s : input %s %s\n", new_start, new_end, start, end);
 			
 			completeAnagrams(new_start, new_end);//, arr, arg_len);
-			free(new_start);
-			free(new_end);
+			//free(new_start);
+			//free(new_end);
 		}
-			char* new_start = malloc(sizeof(char)*(len_start + 2));
+			//char* new_start = malloc(mal_start);
+            //char new_start[mal_start];
 			strcpy(new_start, start);
 			strncat(new_start, end + len_end-1, 1);
 			// printf("%s\n", new_start);
-			char* new_end = malloc(sizeof(char)*len_end);
+			//char* new_end = malloc(mal_end);
+            //char new_end[mal_end];
 			strcpy(new_end, "");
 			strncat(new_end, end, len_end-1);
 			//TODO same bytes copied here: find way to fix
 			// strncat(new_end, end + i, len_end-i);/	}
 			// printf("%s %s\n",new_start,new_end);
 			completeAnagrams(new_start, new_end);//, arr, arg_len);
-			free(new_start);
-			free(new_end);
+			//free(new_start);
+			//free(new_end);
 	}
 	else
 	{
